@@ -1,0 +1,33 @@
+<!--
+ * @Autor: ErioY
+ * @Date: 2019-08-28 19:57:34
+ * @Email: 1973545559@qq.com
+ * @Github: https://github.com/ErioY
+ * @LastEditors: ErioY
+ * @LastEditTime: 2019-08-28 20:21:54
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>数组前添加、后删除</title>
+    <script>
+    // 每点击一次就将`['1','2','3','4','5']`的最后一位放到第一位，如：`['5','1','2','3','4']
+    window.onload = function() {
+        var arr = ['1','2','3','4','5'];
+        var oBtn = document.getElementsByTagName("button")[0];
+        console.log("原数组为：" + arr);
+        oBtn.onclick = function() {
+            // 删除最后一个值的同时把最后一个值加到首位
+            arr.unshift(arr.pop());
+            console.log("点击后：" + arr);
+        }
+    }
+    </script>
+</head>
+<body>
+    <button>点击</button>
+</body>
+</html>

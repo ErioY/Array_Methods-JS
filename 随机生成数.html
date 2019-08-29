@@ -1,0 +1,42 @@
+<!--
+ * @Autor: ErioY
+ * @Date: 2019-08-29 15:15:35
+ * @Email: 1973545559@qq.com
+ * @Github: https://github.com/ErioY
+ * @LastEditors: ErioY
+ * @LastEditTime: 2019-08-29 15:40:09
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>随机生成数</title>
+    <script>
+    // 随机生成7个1~50之间不重复的整数，并存在一个数组中
+    window.onload = function() {
+        var arr = [];
+        for (var i = 0; i < 6; i++) {
+            var flag = true; // 检查是否重复
+            var num = Math.floor(Math.random() * (50 - 1)) + 1; // 生成随机数
+            // 循环判断随机数是否重复
+            for (var i in arr) {
+                if (num == arr[i]) {
+                    flag = false;
+                    break;
+                }
+            }
+            // 随机数不重复，加到数组中
+            if (flag == true) {
+                arr.push(num);
+            }
+        }
+        console.log("生成的随机数数组为：" + arr);
+    }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
